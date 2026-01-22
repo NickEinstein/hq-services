@@ -2,7 +2,7 @@
   <div class="bg-[#F5F6FA] min-h-screen">
     <router-view />
     <DarkModeToggle />
-    <CookieConsent />
+    <!-- <CookieConsent /> -->
   </div>
 </template>
 
