@@ -2,6 +2,27 @@ import { createRouter, createWebHistory } from 'vue-router'
 import MainLayout from '@/layouts/MainLayout.vue'
 
 const routes = [
+  // HQ Insurance Main Pages
+  {
+    path: '/',
+    name: 'home',
+    component: () => import('@/views/auth/Home.vue')
+  },
+  {
+    path: '/stato-pratica',
+    name: 'claim-status',
+    component: () => import('@/views/ClaimStatus.vue')
+  },
+  {
+    path: '/centri-convenzionati',
+    name: 'partner-network',
+    component: () => import('@/views/PartnerNetwork.vue')
+  },
+  {
+    path: '/documenti',
+    name: 'documents',
+    component: () => import('@/views/DocumentsPage.vue')
+  },
   // Auth pages (without MainLayout)
   // {
   //   path: '/landing',
@@ -75,11 +96,7 @@ const routes = [
   //   component: () => import('@/views/auth/Home.vue')
   // },
 
-  {
-    path: '/',
-    name: 'login',
-    component: () => import('@/views/auth/Home.vue')
-  },
+  // Removed duplicate '/' route - now handled by 'home' route above
   // {
   //   path: '/fansngage',
   //   name: 'fansngage-landing',
@@ -88,7 +105,7 @@ const routes = [
 
   // App pages (with MainLayout)
   {
-    path: '/',
+    path: '/app',
     component: MainLayout,
     children: [
       {
