@@ -57,11 +57,18 @@
           :href="whatsappUrl"
           target="_blank"
           rel="noopener noreferrer"
-          class="flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-500 text-white text-sm font-medium transition-colors hover:bg-emerald-600"
+          class="flex h-9 w-9 items-center justify-center rounded-full bg-emerald-500 text-white transition-colors hover:bg-emerald-600"
+          title="WhatsApp"
         >
-          <MessageCircle class="h-4 w-4" />
-          <span>WhatsApp</span>
+          <MessageCircle class="h-5 w-5" />
         </a>
+
+        <router-link
+          to="/login"
+          class="flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-900 text-white text-sm font-medium transition-colors hover:bg-slate-800"
+        >
+          Accedi
+        </router-link>
       </div>
 
       <!-- Mobile Menu Button -->
@@ -120,11 +127,19 @@
           :href="whatsappUrl"
           target="_blank"
           rel="noopener noreferrer"
-          class="flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-emerald-500 text-white font-medium"
+          class="flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-emerald-500 text-white font-medium text-sm"
         >
           <MessageCircle class="h-5 w-5" />
-          Contattaci su WhatsApp
+          WhatsApp
         </a>
+        
+        <router-link
+          to="/login"
+          class="flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-slate-900 text-white font-medium text-sm"
+          @click="mobileMenuOpen = false"
+        >
+          Accedi
+        </router-link>
       </nav>
     </div>
   </header>
