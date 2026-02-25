@@ -90,11 +90,21 @@ const routes = [
     name: 'error-500',
     component: () => import('@/views/error/Error500.vue')
   },
-  // {
-  //   path: '/login',
-  //   name: 'login',
-  //   component: () => import('@/views/auth/Home.vue')
-  // },
+  {
+    path: '/login',
+    name: 'login',
+    component: () => import('@/views/auth/Login.vue')
+  },
+  {
+    path: '/register',
+    name: 'register',
+    component: () => import('@/views/auth/Register.vue')
+  },
+  {
+    path: '/app/user/dashboard',
+    name: 'user-dashboard',
+    component: () => import('@/views/dashboard/UserDashboard.vue')
+  },
 
   // Removed duplicate '/' route - now handled by 'home' route above
   // {
